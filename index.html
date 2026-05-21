@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body{
+font-family:Arial;
+background:#f1f1f1;
+margin:0;
+}
+
+.header{
+background:
+linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+url(https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=2070);
+
+background-size:cover;
+background-position:center;
+padding:70px 20px;
+border-radius:0 0 25px 25px;
+box-shadow:0 0 40px
+rgba(255,80,0,0.7);
+animation:fire 2s infinite alternate;
+}
+
+.search{
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+.category{
+display:flex;
+gap:10px;
+margin-top:10px;
+}
+
+.category button{
+flex:1;
+padding:12px;
+border:none;
+border-radius:10px;
+background:white;
+box-shadow:0 0 20px orange;
+font-weight:bold;
+cursor:pointer;
+}
+
+.category button:hover{
+background:black;
+color:white;
+transform:scale(1.05);
+transition:0.4s;
+box-shadow:0 0 20px orange;
+}
+
+.products{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+padding:10px;
+}
+
+.card{
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card img{
+width:100%;
+}
+
+.card p{
+padding:10px;
+font-size:14px;
+}
+
+a{
+text-decoration:none;
+color:black;
+
+}
+
+</style>
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+
+<input class="search" placeholder="Cari Link">
+<div class="profile">
+<img 
+src="https://i.ibb.co.com/WNJ3dXPg/IMG-20260519-193735.jpg" alt="IMG-20260519-193735" style="width:120px;
+height:130px;
+border-radius:50%;
+object-fit:cover;
+">
+</div>
+<h2 style="
+color:white;
+font-size:38px;
+margin-left:20px;
+margin-top:10px;
+text-align:left;
+">
+DRYL OUTFIT
+</h2>
+
+<button onclick="showCategory('jaket')">JAKET</button>
+<button onclick="showCategory('tshirt')">T-SHIRT</button>
+<button onclick="showCategory('sepatu')">SEPATU</button>
+<button onclick="showCategory('celana')">CELANA</button>
+<button onclick="showCategory('topi')">TOPI</button>
+
+<script>
+
+function showCategory(category) {
+
+let cards = document.querySelectorAll('.card');
+
+cards.forEach(card => {
+card.style.display = "none";
+});
+
+let selected = document.querySelectorAll('.' + category);
+
+selected.forEach(card => {
+card.style.display = "block";
+});
+
+}
+
+/* SEARCH */
+const searchInput = document.querySelector(".search");
+
+searchInput.addEventListener("keyup", () => {
+
+let keyword = searchInput.value.toLowerCase().trim();
+
+let cards = document.querySelectorAll(".card");
+
+cards.forEach((card) => {
+
+let text = card.innerText.toLowerCase();
+
+if(text.includes(keyword)){
+card.style.display = "block";
+}else{
+card.style.display = "none";
+}
+
+});
+
+if(keyword === ""){
+cards.forEach((card)=>{
+card.style.display = "block";
+});
+}
+
+});
+
+</script>
+
+
+
+}
+</script>
+
+</body>
+</div>
+
+</div>
+
+<div class="products">
+
+<div class="card jaket">
+<a href="https://s.shopee.co.id/9Kf0XYpO2z">
+
+<img src="https://i.ibb.co.com/V07w63NG/no-mark-React-Native-snapshot-image-21.png" alt="no-mark-React-Native-snapshot-image-21" style="width:100%; height:150px; object-fit:cover;">
+
+<p>01. jaket semi kulit </p>
+</a>
+</div>
+
+<div class="card tshirt">
+<a href="https://s.shopee.co.id/6feGc8Yqtp">
+
+<img src="https://i.ibb.co.com/YBJQNNh0/mybasic-airy-breezewear.jpg" alt="mybasic-airy-breezewear" style="width:100%; height:150px; object-fit:cover;">
+<p>02. MYbasic T-SHIRT OVERSIZED</p>
+
+</a>
+</div>
+<div class="card celana">
+<a href="https://s.shopee.co.id/2BBrJBCyQZ">
+
+<img src="https://i.ibb.co.com/pCsdst0/celana-cargo.jpg" alt="celana-cargo" style="width:100%; height:150px; object-fit:cover;"> 
+
+<p>03. CELANA CARGO </p>
+
+</a>
+</div>
+
+
+</div class=caerd>
+<a href=""
+
+</body>
+</html> 
