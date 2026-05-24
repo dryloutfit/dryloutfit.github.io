@@ -84,7 +84,6 @@ transform:translateY(-5px);
   background:white;
 }
 
-}
 
 .card p{
 padding:10px;
@@ -94,7 +93,6 @@ font-size:14px;
 a{
 text-decoration:none;
 color:black;
-`
 }
 
 </style>
@@ -130,7 +128,8 @@ DRYL OUTFIT
 <button onclick="showCategory('celanapendek')">CELANA PENDEK</button>
 <button onclick="showCategory('sepatu')">SEPATU</button>
 <button onclick="showCategory('jamtangan')">JAM TANGAN</button>
-<button onclick="showCategory('TOPI')">TOPI</button>
+<button onclick="showCategory('topi')">TOPI</button>
+<button onclick="showAll()">SEMUA</button>
 
 </div>
 <script>
@@ -184,22 +183,26 @@ cards.forEach(card => {
 // FILTER BUTTON
 function showCategory(category) {
 
-  let cards =
-  document.querySelectorAll('.card');
+  let cards = document.querySelectorAll('.card');
 
   cards.forEach(card => {
 
- if(card.classList.contains(category)){
+    if(card.classList.contains(category)){
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
 
-  card.style.display = "block";
-
- } else {
-
- card.style.display = "none";
+  });
 
 }
+function showAll(){
 
-});
+  let cards = document.querySelectorAll('.card');
+
+  cards.forEach(card => {
+    card.style.display = "block";
+  });
 
 }
   
@@ -501,7 +504,7 @@ card.style.display = "block";
 
 </a>
 </div>
-<div class="card" data-number="04">
+<div class="card kemeja " data-number="04">
 <a href="https://s.shopee.co.id/30l2odlQzT">
 
 <img src="https://i.ibb.co.com/SwFbsbFS/Whats-App-Image-2026-05-23-at-11-55-25.jpg" alt="Whats-App-Image-2026-05-23-at-11-55-25"style="width:100%; object-fit:cover;">
