@@ -99,8 +99,6 @@ color:black;
 
 </style>
 
-</style>
-
 </head>
 
 <body>
@@ -186,21 +184,26 @@ cards.forEach(card => {
 // FILTER BUTTON
 function showCategory(category) {
 
-  let cards = document.querySelectorAll('.card');
+  let cards =
+  document.querySelectorAll('.card');
 
   cards.forEach(card => {
-    card.style.display = "none";
-  });
 
-  let selected = document.querySelectorAll("." + category);
+ if(card.classList.contains(category)){
 
-  selected.forEach(card => {
-    card.style.display = "block";
-  });
+  card.style.display = "block";
+
+ } else {
+
+ card.style.display = "none";
 
 }
 
-/* SEARCH */
+});
+
+}
+  
+/* SEARCH*/
 const searchInput = document.querySelector(".search");
 
 searchInput.addEventListener("keyup", () => {
@@ -261,7 +264,7 @@ card.style.display = "block";
 
 </a>
 </div>
-<div class="card jamtangan" data-number="71">
+<div class="card jamtangan">
 <a href="https://s.shopee.co.id/7pqFO5WwOu">
 
 <img src="https://i.ibb.co.com/CD1LVby/Whats-App-Image-2026-05-24-at-18-47-53.jpg" alt="Whats-App-Image-2026-05-24-at-18-47-53" style="width:100%; height:150px; object-fit:cover;"> 
@@ -270,7 +273,7 @@ card.style.display = "block";
 
 </a>
 </div>
-<div class="card jamtangan" data-number="71"> 
+<div class="card jamtangan"> 
 <a href="https://s.shopee.co.id/3LNq2N0fRd">
 
 <img src="https://i.ibb.co.com/b5Nr93kK/Whats-App-Image-2026-05-24-at-18-27-42-3.jpg" alt="Whats-App-Image-2026-05-24-at-18-27-42-3"style="width:100%; height:150px; object-fit:cover;"> 
