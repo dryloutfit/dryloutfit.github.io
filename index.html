@@ -233,20 +233,6 @@ card.style.display = "block";
 });
 }
 
-/* sorting nomor */
-window.addEventListener("load", () => {
-
-const products = document.querySelector('.products');
-const items = Array.from(products.children);
-
-items.sort((a, b) => {
-  return a.dataset.number - b.dataset.number;
-});
-
-items.forEach(item => products.appendChild(item));
-
-});S
-
 </script>
 
 </div>
@@ -1808,6 +1794,24 @@ items.forEach(item => products.appendChild(item));
 </a>
 </div>
 
+<script>
+
+window.addEventListener("DOMContentLoaded", () => {
+
+const products = document.querySelector('.products');
+const items = Array.from(products.children);
+
+items.sort((a, b) => {
+return Number(a.dataset.number) - Number(b.dataset.number);
+});
+
+items.forEach(item => {
+products.appendChild(item);
+});
+
+});
+
+</script>
 
 </body>
 </html> 
