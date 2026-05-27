@@ -129,6 +129,7 @@ DRYL OUTFIT
 <button onclick="showCategory('sepatu')">SEPATU</button>
 <button onclick="showCategory('jamtangan')">JAM TANGAN</button>
 <button onclick="showCategory('topi')">TOPI</button>
+<button onclick="showCategory('couple')">COUPLE</button>
 <button onclick="showAll()">SEMUA</button>
 
 </div>
@@ -145,7 +146,7 @@ cards.forEach(card => {
     card.classList.add("kaos");
   }
 
-  else if(number >= 41 && number <= 60){
+  else if(number >= 51 && number <= 60){
     card.classList.add("kemeja");
   }
 
@@ -176,6 +177,10 @@ cards.forEach(card => {
   else if(number >= 161 && number <= 180){
     card.classList.add("topi");
   }
+  else if(number >= 41 && number <= 50){
+    card.classList.add("couple");
+  
+
 
 });
 
